@@ -104,23 +104,23 @@ public class Assignment3 {
  * 	class; also k < 10), meaning that the grade achieved is equal to gradearray[i][k] + 
  * 	gradeOutput[i-1][h-k]. For each value of k, we check to see if the newfound grade
  * 	is higher than the previous; if so, then the values in gradeOutput[i][h] and hoursSpent[i][h]
- *  are updated appropriately. There is no need to average out the sum of the grades, as
- *  it would not affect the comparisons made.
- *  Once every value has been filled out, we examine the optimal solution to our complete problem,
- *  which is in hoursSpent[n][H], where n = totalClasses-1 and H = totalHours. This is the time
- *  spent on class n in order to achieve the maximum possible grade average overall. This means that,
- *  for the remaining n-1 classes, we spend H-k hours, so we check hoursSpent[n-1][H-k] next, and so on.
- *  We fill the studentoutput array with the appropriate hours and grades going by this.
- *  We can verify that the solution found via the above algorithm is indeed optimal by considering
- *  the contrary. If our solution is not optimal, then some other solution must exist that is, 
- *  meaning that this other solution distributes hours in such a way that a better grade is 
- *  attained. This means that, in our algorithm, when we determine the maximum grade possible 
+ * 	are updated appropriately. There is no need to average out the sum of the grades, as
+ *	it would not affect the comparisons made.
+ *  	Once every value has been filled out, we examine the optimal solution to our complete problem,
+ *  	which is in hoursSpent[n][H], where n = totalClasses-1 and H = totalHours. This is the time
+ *  	spent on class n in order to achieve the maximum possible grade average overall. This means that,
+ *  	for the remaining n-1 classes, we spend H-k hours, so we check hoursSpent[n-1][H-k] next, and so on.
+ *  	We fill the studentoutput array with the appropriate hours and grades going by this.
+ *  	We can verify that the solution found via the above algorithm is indeed optimal by considering
+ *  	the contrary. If our solution is not optimal, then some other solution must exist that is, 
+ *  	meaning that this other solution distributes hours in such a way that a better grade is 
+ *  	attained. This means that, in our algorithm, when we determine the maximum grade possible 
  * 	for every possible h hours spent on the first i classes, there must be some higher grade
  * 	that we overlooked. This cannot be the case, however, as the iterative algorithm
  * 	considers every possible number of hours that can be spent on the first i classes,
  * 	as well as for each individual case concerning the number of hours spent on class i
  * 	specifically, for every class i. This means that no possible sum of grades could
- *  have been overlooked, contradicting the idea that we could have missed a potentially
+ *  	have been overlooked, contradicting the idea that we could have missed a potentially
  * 	higher grade.
  * 
  */
